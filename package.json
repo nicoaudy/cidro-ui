@@ -1,0 +1,26 @@
+{
+  "name": "cidro",
+  "version": "1.0.0",
+  "description": "Cidro UI library for React Native, with spicy tasty.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Cidro",
+    "UI",
+    "React",
+    "React",
+    "Native",
+    "React",
+    "Native",
+    "Components",
+    "UI",
+    "library"
+  ],
+  "author": "NicoAudy",
+  "license": "MIT",
+  "devDependencies": {
+    "styled-components": "^4.3.2"
+  }
+}
