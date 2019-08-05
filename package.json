@@ -1,7 +1,7 @@
 {
   "name": "cidro",
   "version": "1.0.0",
-  "description": "Cidro UI library for React Native, with spicy tasty.",
+  "description": "Cidro UI library for React Native, with spicy tasty",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,15 @@
     "UI",
     "library"
   ],
-  "author": "NicoAudy",
+  "author": {
+    "name": "Nico Audy",
+    "email": "nicoaudy1994@gmail.com",
+    "url": "https://github.com/nicoaudy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicoaudy/cidro-ui"
+  },
   "license": "MIT",
   "devDependencies": {
     "styled-components": "^4.3.2"
