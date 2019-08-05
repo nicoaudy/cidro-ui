@@ -11,48 +11,45 @@ const Wrapper = styled.TouchableOpacity`
   align-items: center;
   border-width: 1;
   border-radius: 6;
-  border-color: ${props => props.theme.color[props.type]};
+  border-color: ${props =>
+    props.outline
+      ? props.theme.palette[props.type].background
+      : props.theme.palette[props.type].second};
   background-color: ${props =>
-    props.outline ? props.theme.color[props.type] : props.theme.color.primary};
+    props.outline
+      ? props.theme.palette[props.type].second
+      : props.theme.palette[props.type].background};
 `;
 
 const Title = styled.Text`
   color: ${props =>
-    props.outline ? props.theme.color.primary : props.theme.color.white};
+    props.outline
+      ? props.theme.palette[props.type].background
+      : props.theme.palette[props.type].second};
   font-weight: 800;
   font-size: ${props => props.theme.size.regular};
 `;
 
-const Button = ({
-  onPress,
-  title,
-  width,
-  outline,
-  type = "primary",
-  ...props
-}) => (
+const Button = ({ title, width, outline, type, ...props }) => (
   <ThemeProvider theme={theme}>
-    <Wrapper
-      onPress={onPress}
-      width={width}
-      outline={outline}
-      type={type}
-      {...props}
-    >
-      <Title outline={outline}>{title}</Title>
+    <Wrapper width={width} outline={outline} type={type} {...props}>
+      <Title outline={outline} type={type}>
+        {title}
+      </Title>
     </Wrapper>
   </ThemeProvider>
 );
 
-Wrapper.propTypes = {
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
   width: PropTypes.string,
   outline: PropTypes.bool,
-  color: PropTypes.string
+  type: PropTypes.oneOf(["primary", "success", "danger", "warning"])
 };
 
-Title.propTypes = {
-  color: PropTypes.string,
-  outline: PropTypes.bool
+Button.defaultProps = {
+  outline: false,
+  type: "primary"
 };
 
 export default Button;

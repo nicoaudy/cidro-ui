@@ -22,17 +22,23 @@ const color = {
 };
 
 export const theme = {
-  color: {
-    transparent: "rgba(0,0,0,0)",
-    text: "#212529",
-    primary: "#7d4cdb",
-    border: "#c6c6c6",
-    white: "#fff",
-    gray: "#9ca5ab",
-    error: "#ff4040",
-    warning: "#ffaa15",
-    success: "#00873d",
-    secondary: "#f3f3f3"
+  palette: {
+    primary: {
+      background: color.primary,
+      second: color.white
+    },
+    success: {
+      background: color.success,
+      second: color.white
+    },
+    danger: {
+      background: color.error,
+      second: color.white
+    },
+    warning: {
+      background: color.warning,
+      second: color.white
+    }
   },
 
   size: {
