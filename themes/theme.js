@@ -40,7 +40,16 @@ export const theme = {
       background: color.warning,
       second: color.white
     },
-    gray: "#9ca5ab"
+    transparent: "rgba(0,0,0,0)",
+    text: "#212529",
+    primary: "#202c41",
+    border: "#c6c6c6",
+    white: "#fff",
+    gray: "#9ca5ab",
+    error: "#d63031",
+    warning: "#f0932b",
+    success: "#50c356",
+    secondary: "#f3f3f3"
   },
 
   size: {
