@@ -2,6 +2,7 @@ const size = {
   h1: "38px",
   h2: "34px",
   h3: "30px",
+  h4: "24px",
   input: "18px",
   regular: "17px",
   medium: "14px",
@@ -38,7 +39,8 @@ export const theme = {
     warning: {
       background: color.warning,
       second: color.white
-    }
+    },
+    gray: "#9ca5ab"
   },
 
   size: {
