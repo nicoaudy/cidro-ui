@@ -11,13 +11,13 @@ const size = {
 const color = {
   transparent: "rgba(0,0,0,0)",
   text: "#212529",
-  primary: "#7d4cdb",
+  primary: "#202c41",
   border: "#c6c6c6",
   white: "#fff",
   gray: "#9ca5ab",
-  error: "#ff4040",
-  warning: "#ffaa15",
-  success: "#00873d",
+  error: "#d63031",
+  warning: "#f0932b",
+  success: "#50c356",
   secondary: "#f3f3f3"
 };
 
@@ -56,7 +56,9 @@ export const theme = {
     h1: size.h1,
     h2: size.h2,
     h3: size.h3,
-    normal: size.regular
+    normal: size.regular,
+    medium: size.medium,
+    small: size.small
   },
 
   padding: {}
