@@ -13,19 +13,19 @@ const Wrapper = styled.TouchableOpacity`
   border-radius: 6;
   border-color: ${props =>
     props.outline
-      ? props.theme.palette[props.type].background
-      : props.theme.palette[props.type].second};
+      ? props.theme.palette[props.type]
+      : props.theme.palette.white};
   background-color: ${props =>
     props.outline
-      ? props.theme.palette[props.type].second
-      : props.theme.palette[props.type].background};
+      ? props.theme.palette.white
+      : props.theme.palette[props.type]};
 `;
 
 const Title = styled.Text`
   color: ${props =>
     props.outline
-      ? props.theme.palette[props.type].background
-      : props.theme.palette[props.type].second};
+      ? props.theme.palette[props.type]
+      : props.theme.palette.white};
   font-weight: 800;
   font-size: ${props => props.theme.size.regular};
 `;

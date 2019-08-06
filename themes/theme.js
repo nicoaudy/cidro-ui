@@ -24,22 +24,6 @@ const color = {
 
 export const theme = {
   palette: {
-    primary: {
-      background: color.primary,
-      second: color.white
-    },
-    success: {
-      background: color.success,
-      second: color.white
-    },
-    danger: {
-      background: color.error,
-      second: color.white
-    },
-    warning: {
-      background: color.warning,
-      second: color.white
-    },
     transparent: "rgba(0,0,0,0)",
     text: "#212529",
     primary: "#202c41",

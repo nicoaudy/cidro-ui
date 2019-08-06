@@ -14,7 +14,7 @@ const TopRow = styled.View`
 `;
 
 const Title = styled.Text`
-  color: ${props => props.theme.palette.primary.background};
+  color: ${props => props.theme.palette.primary};
   font-weight: 600;
   font-size: ${props => props.theme.font.h3};
   margin-bottom: 12;
