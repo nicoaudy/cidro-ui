@@ -6,6 +6,7 @@ import { theme } from "../../themes/theme";
 
 const Container = styled.View`
   flex: 1;
+  margin-horizontal: 20;
 `;
 
 const TopRow = styled.View`
@@ -16,6 +17,7 @@ const Title = styled.Text`
   color: ${props => props.theme.palette.primary.background};
   font-weight: 600;
   font-size: ${props => props.theme.font.h3};
+  margin-bottom: 12;
 `;
 
 const SubTitle = styled.Text`
@@ -24,7 +26,7 @@ const SubTitle = styled.Text`
   margin-bottom: 12;
 `;
 
-const FormWrapper = ({ children, title, subtitle }) => {
+const Form = ({ children, title, subtitle }) => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
@@ -40,10 +42,10 @@ const FormWrapper = ({ children, title, subtitle }) => {
   );
 };
 
-FormWrapper.propTypes = {
+Form.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
   subtitle: PropTypes.string
 };
 
-export default FormWrapper;
+export default Form;
