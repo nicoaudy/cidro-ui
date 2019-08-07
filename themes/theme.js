@@ -31,6 +31,7 @@ export const theme = {
     white: "#fff",
     gray: "#9ca5ab",
     error: "#d63031",
+    danger: "#FF4785",
     warning: "#f0932b",
     success: "#50c356",
     secondary: "#f3f3f3"
