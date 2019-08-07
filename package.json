@@ -1,7 +1,7 @@
 {
   "name": "cidro",
-  "version": "1.0.0",
-  "description": "Cidro UI library for React Native, with spicy tasty",
+  "version": "0.1.0",
+  "description": "Cidro UI library for React Native, with spicy tasty 🌶️🔥",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
