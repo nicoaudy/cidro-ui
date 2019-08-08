@@ -1,6 +1,7 @@
 import React from "react";
-
+import Proptypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
+
 import { FieldWrapper } from "../../";
 import { theme } from "../../themes/theme";
 
@@ -23,4 +24,11 @@ const Input = ({ label, message, type, ...props }) => (
     </FieldWrapper>
   </ThemeProvider>
 );
+
+Input.propTypes = {
+  label: Proptypes.string.isRequired,
+  message: Proptypes.string,
+  type: PropTypes.oneOf(["success", "error"])
+};
+
 export default Input;

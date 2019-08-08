@@ -34,7 +34,7 @@ const FieldWrapper = ({ label, message, type, children }) => (
 FieldWrapper.propTypes = {
   label: Proptypes.string.isRequired,
   message: Proptypes.string,
-  type: Proptypes.string
+  type: PropTypes.oneOf(["success", "error"])
 };
 
 export default FieldWrapper;
