@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import styled, { ThemeProvider } from "styled-components";
+
 import { theme } from "../../themes/theme";
 
 const Container = styled.View`

@@ -1,7 +1,7 @@
 import React from "react";
-import Proptypes from "prop-types";
-
+import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
+
 import { theme } from "../../themes/theme";
 
 const Container = styled.View`
@@ -32,8 +32,8 @@ const FieldWrapper = ({ label, message, type, children }) => (
 );
 
 FieldWrapper.propTypes = {
-  label: Proptypes.string.isRequired,
-  message: Proptypes.string,
+  label: PropTypes.string.isRequired,
+  message: PropTypes.string,
   type: PropTypes.oneOf(["success", "error"])
 };
 
