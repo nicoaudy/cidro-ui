@@ -33,7 +33,7 @@ const FieldWrapper = ({ label, message, type, children }) => (
 
 FieldWrapper.propTypes = {
   label: Proptypes.string.isRequired,
-  message: Proptypes.string.isRequired,
+  message: Proptypes.string,
   type: Proptypes.string
 };
 
