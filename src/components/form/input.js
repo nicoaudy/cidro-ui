@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled, { ThemeProvider } from "styled-components";
-import { FieldWrapper } from "../../../";
+import { FieldWrapper } from "../../";
 import { theme } from "../../themes/theme";
 
 const TextInput = styled.TextInput`
