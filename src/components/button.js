@@ -1,43 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeProvider } from "styled-components/native";
+import styled from "styled-components/native";
 
-import { theme } from "../themes/theme";
+import { COLORS, SIZES } from "../themes";
 
 const Wrapper = styled.TouchableOpacity`
-  width: ${props => (props.width ? props.width : props.theme.width.full)};
-  padding: ${props => props.theme.size.regular};
+  width: ${props => (props.width ? props.width : SIZES.width.full)};
+  padding: ${SIZES.size.regular};
   justify-content: center;
   align-items: center;
   border-width: 1;
   border-radius: 6;
-  border-color: ${props =>
-    props.outline
-      ? props.theme.palette[props.type]
-      : props.theme.palette.white};
+  border-color: ${props => (props.outline ? COLORS[props.type] : COLORS.WHITE)};
   background-color: ${props =>
-    props.outline
-      ? props.theme.palette.white
-      : props.theme.palette[props.type]};
+    props.outline ? COLORS.WHITE : COLORS[props.type]};
 `;
 
 const Title = styled.Text`
-  color: ${props =>
-    props.outline
-      ? props.theme.palette[props.type]
-      : props.theme.palette.white};
+  color: ${props => (props.outline ? COLORS[props.type] : COLORS.WHITE)};
   font-weight: 800;
-  font-size: ${props => props.theme.size.regular};
+  font-size: ${props => SIZES.BASE};
 `;
 
 const Button = ({ title, width, outline, type, ...props }) => (
-  <ThemeProvider theme={theme}>
-    <Wrapper width={width} outline={outline} type={type} {...props}>
-      <Title outline={outline} type={type}>
-        {title}
-      </Title>
-    </Wrapper>
-  </ThemeProvider>
+  <Wrapper width={width} outline={outline} type={type} {...props}>
+    <Title outline={outline} type={type}>
+      {title}
+    </Title>
+  </Wrapper>
 );
 
 Button.propTypes = {

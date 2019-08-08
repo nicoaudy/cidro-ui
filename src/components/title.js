@@ -1,20 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeProvider } from "styled-components/native";
+import styled from "styled-components/native";
 
-import { theme } from "../themes/theme";
+import { SIZES } from "../themes";
 
 const StyledTitle = styled.Text`
-  font-size: ${props =>
-    props.theme.font[props.size] || props.theme.font.normal};
+  font-size: ${props => SIZES.font[props.size] || SIZES.font.normal};
 `;
 
 const Title = ({ text, size, ...props }) => (
-  <ThemeProvider theme={theme}>
-    <StyledTitle size={size} {...props}>
-      {text}
-    </StyledTitle>
-  </ThemeProvider>
+  <StyledTitle size={size} {...props}>
+    {text}
+  </StyledTitle>
 );
 
 Title.propTypes = {
