@@ -5,5 +5,6 @@ import FieldWrapper from "./components/form/field_wrapper";
 import TextInput from "./components/form/input";
 import Block from "./components/block";
 import Text from "./components/text";
+import Toolbar from "./components/toolbar";
 
-export { Button, Title, Form, FieldWrapper, TextInput, Block, Text };
+export { Button, Title, Form, FieldWrapper, TextInput, Block, Text, Toolbar };
