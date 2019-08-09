@@ -5,28 +5,27 @@ import PropTypes from "prop-types";
 import normalize from "../helpers/normalize";
 import { COLORS } from "../themes";
 
-const Typography = props => {
-  const {
-    style,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    muted,
-    neutral,
-    size,
-    color,
-    bold,
-    italic,
-    center,
-    right,
-    left,
-    children,
-    styles,
-    ...rest
-  } = props;
+const Typography = ({
+  style,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  muted,
+  neutral,
+  size,
+  color,
+  bold,
+  italic,
+  center,
+  right,
+  left,
+  children,
+  styles,
+  ...rest
+}) => {
   return (
     <Text
       style={[
