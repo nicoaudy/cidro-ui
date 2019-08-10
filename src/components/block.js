@@ -1,86 +1,66 @@
-import React, { Component } from "react";
+import React from "react";
 import { View, StyleSheet, SafeAreaView } from "react-native";
 import PropTypes from "prop-types";
 
 import { COLORS, SIZES } from "../themes";
 
-class Block extends Component {
-  render() {
-    const {
-      row,
-      flex,
-      center,
-      middle,
-      top,
-      bottom,
-      right,
-      left,
-      space,
-      fluid,
-      height,
-      card,
-      width,
-      safe,
-      children,
-      style,
-      styles,
-      ...props
-    } = this.props;
+const Block = ({
+  row,
+  column,
+  flex,
+  center,
+  middle,
+  top,
+  bottom,
+  right,
+  left,
+  space,
+  fluid,
+  height,
+  card,
+  width,
+  safe,
+  children,
+  style,
+  ...props
+}) => {
+  const styleBlock = [
+    // styles.block,
+    row && styles.row,
+    column && styles.column,
+    flex && { flex: flex === true ? 1 : flex },
+    center && styles.center,
+    middle && styles.middle,
+    top && styles.top,
+    bottom && styles.bottom,
+    right && styles.right,
+    left && styles.left,
+    space && { justifyContent: `space-${space}` },
+    fluid && styles.fluid,
+    card && styles.card,
+    height && { height },
+    width && { width },
+    style
+  ];
 
-    const styleBlock = [
-      styles.block,
-      row && styles.row,
-      flex && { flex: flex === true ? 1 : flex },
-      center && styles.center,
-      middle && styles.middle,
-      top && styles.top,
-      bottom && styles.bottom,
-      right && styles.right,
-      left && styles.left,
-      space && { justifyContent: `space-${space}` },
-      fluid && styles.fluid,
-      card && styles.card,
-      height && { height },
-      width && { width },
-      style
-    ];
-
-    if (safe) {
-      return (
-        <SafeAreaView style={styleBlock} {...props}>
-          {children}
-        </SafeAreaView>
-      );
-    }
-
+  if (safe) {
     return (
-      <View {...props} style={styleBlock}>
+      <SafeAreaView style={styleBlock} {...props}>
         {children}
-      </View>
+      </SafeAreaView>
     );
   }
-}
 
-Block.defaultProps = {
-  row: false,
-  flex: false,
-  center: false,
-  middle: false,
-  top: false,
-  bottom: false,
-  right: false,
-  left: false,
-  card: false,
-  space: null,
-  fluid: false,
-  height: null,
-  width: null,
-  safe: false,
-  styles: {}
+  return (
+    <View {...props} style={styleBlock}>
+      {children}
+    </View>
+  );
 };
 
 Block.propTypes = {
   row: PropTypes.bool,
+  column: PropTypes.bool,
   flex: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   center: PropTypes.bool,
   middle: PropTypes.bool,
@@ -98,7 +78,7 @@ Block.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  block: {
+  column: {
     flexDirection: "column"
   },
   row: {
@@ -135,5 +115,4 @@ const styles = StyleSheet.create({
     width: "auto"
   }
 });
-
 export default Block;
