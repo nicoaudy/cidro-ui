@@ -3,3 +3,173 @@ When i'm working on React Native, to avoid uneccessary repetition i create this 
 
 ## Requirements
 Cidro based on `styled-components` so you have to installed first.
+
+```
+$ npm install styled-components
+```
+
+**Install**
+```
+$ npm install cidro 
+```
+
+# Components
+
+## Block
+
+**Usage**
+
+```javascript
+import { Block, Text } from "cidro";
+
+const App = () => (
+  <Block safe>
+    <Text h1>CIDRO 🔥</Text>
+  </Block>
+);
+```
+
+**Available Props**
+
+| Property |     Type     | Default  | Description                                      |
+| -------- | :----------: | :------: | ------------------------------------------------ |
+| row      |     bool     |  false   | flexDirection: 'row'                             |
+| column   |     bool     |  false   | flexDirection: 'column'                          |
+| flex     | bool, number | false, 1 | flex: 1 or <yourNumber>                          |
+| safe     |     bool     |  false   | Wrap the block with SafeAreaView                 |
+| center   |     bool     |  false   | alignItems: 'center' alignSelf: 'center'         |
+| middle   |     bool     |  false   | alignItems: 'center' alignSelf: 'center'         |
+| top      |     bool     |  false   | alignItems: 'flex-start' alignSelf: 'flex-start' |
+| bottom   |     bool     |  false   | alignItems: 'flex-end' alignSelf: 'flex-end'     |
+| left     |     bool     |  false   | alignItems: 'flex-start'                         |
+| right    |     bool     |  false   | alignItems: 'flex-start'                         |
+| card     |     bool     |  false   | changes the border-radius, -width and -color     |
+| fluid    |     bool     |  false   | width: 'auto'                                    |
+| height   |    number    |   null   | changes the height of the Block                  |
+| space    |    string    |   null   | options are: 'between', 'around' or 'evently'    |
+| width    |    number    |   null   | changes the width of the Block                   |
+
+---
+## Toolbar
+
+**Usage**
+
+```javascript
+import { Toolbar, Text } from "cidro";
+
+const App = () => (
+    <Toolbar
+      left={<Text>Back</Text>}
+      leftHandler={() => alert("left handler")}
+      center={<Text>CIDRO UI 🔥</Text>}
+      right={<Text>Logout</Text>}
+      rightHandler={() => alert("right handler")}
+);
+```
+
+**Available Props**
+
+| Property     |   Type    | Default  | Description                                                                   |
+| ------------ | :-------: | :------: | ----------------------------------------------------------------------------- |
+| left         | component |   null   | set your own component (eg: Text or Icon)                                     |
+| leftHandler  | function  | () => {} | Take an arrow function and everytime the user presses the function is called. |
+| center       |  [color]  |   null   | set your own component                                                        |
+| right        |   color   |   null   | change the shadow color                                                       |
+| rightHandler |   style   |  () =>   | Take an arrow function and everytime the user presses the function is called. |
+| style        |   style   |   null   | add any style to the whole container                                          |
+
+---
+## Button
+
+**Usage**
+
+```javascript
+import { Button } from "cidro";
+
+const App = () => <Button title="Login" onPress={action("Button pressed")} />;
+```
+
+**Available Props**
+
+| Property |  Type  | Default | Description                                              |
+| -------- | :----: | :-----: | -------------------------------------------------------- |
+| title    | string |  null   | Title is required                                        |
+| width    | string |  null   | Change the width                                         |
+| outline  |  bool  |  false  | Change button style                                      |
+| type     | string | primary | Available type "primary", "success", "danger", "warning" |
+
+---
+## Text 
+
+**Usage**
+
+```javascript
+import { Text } from "cidro";
+
+const App = () => <Text h1>CIDRO UI 🔥</Text>;
+```
+
+**Available Props**
+
+| Property |  Type  | Default | Description                       |
+| -------- | :----: | :-----: | --------------------------------- |
+| h1       |  bool  |  false  | Sets the text's fontSize to 44px. |
+| h2       |  bool  |  false  | Sets the text's fontSize to 38px. |
+| h3       |  bool  |  false  | Sets the text's fontSize to 30px. |
+| h4       |  bool  |  false  | Sets the text's fontSize to 24px. |
+| h5       |  bool  |  false  | Sets the text's fontSize to 18px. |
+| p        |  bool  |  false  | Sets the text's fontSize to 16px. |
+| size     | number |    0    | Sets the fontSize of the text.    |
+| color    | string |  null   | Sets the color of the text.       |
+| muted    |  bool  |  false  | Changes the text color            |
+| bold     |  bool  |  false  | Sets the fontWeight to 'bold'.    |
+| italic   |  bool  |  false  | Sets the fontStyle to 'italic'.   |
+
+---
+## Form
+
+**Usage**
+
+```javascript
+import { Form } from "cidro";
+
+const App = () => (
+  <Form title="Helo 🔥" subtitle="Cidro is awesome because built with ❤️">
+    <View style={{ flex: 1, backgroundColor: "papayawhip" }} />
+  </Form>
+);
+```
+
+**Available Props**
+
+| Property |     Type     |   Default   | Description            |
+| -------- | :----------: | :---------: | ---------------------- |
+| children |  component   |    null     | set your own component |
+| title    | bool, string | false, null | set your title         |
+| subtitle | bool, string | false, null | set your subtitle      |
+
+---
+## Input
+
+**Usage**
+
+```javascript
+import { TextInput } from "cidro";
+
+const App = () => (
+  <TextInput
+    label="Email"
+    value="cidro@ui.good"
+    keyboardType="email-address"
+    onChangeText={() => alert("Text On Change")}
+  />
+);
+```
+
+**Available Props**
+
+| Property |  Type  | Default | Description                                          |
+| -------- | :----: | :-----: | ---------------------------------------------------- |
+| label    | string |  null   | set your label                                       |
+| message  | string |  null   | set your message (eg: "Whops your email is invalid") |
+| type     | string |  null   | Available type "success", "error"                    |
