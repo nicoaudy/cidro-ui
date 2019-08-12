@@ -1,6 +1,6 @@
 # CIDRO UI - React Native UI Library 🔥
 
-[![npm](https://img.shields.io/npm/dw/cidro?style=for-the-badge)](https://www.npmjs.com/package/cidro) 
+[![npm](https://img.shields.io/npm/dt/cidro?color=blue&style=for-the-badge)](https://www.npmjs.com/package/cidro) 
 
 ## Requirements
 Cidro based on `styled-components` so you have to installed first.
