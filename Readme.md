@@ -1,5 +1,6 @@
-# History
-When i'm working on React Native, to avoid uneccessary repetition i create this UI lib for basic components like Inputs, Buttons etc. By using this UI lib we can reduce the repition and get spicy ui 🌶️🌶️🔥🔥.
+# CIDRO UI - React Native UI Library 🔥
+
+[![npm](https://img.shields.io/npm/dw/cidro?style=for-the-badge)](https://www.npmjs.com/package/cidro) 
 
 ## Requirements
 Cidro based on `styled-components` so you have to installed first.
@@ -13,7 +14,7 @@ $ npm install styled-components
 $ npm install cidro 
 ```
 
-# Components
+# Available Components
 
 ## Block
 
