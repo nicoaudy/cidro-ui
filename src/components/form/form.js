@@ -1,42 +1,41 @@
 import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 
-import { COLORS, SIZES } from "../../themes";
+import { COLORS } from "../../themes";
 
-const Container = styled.View`
-  flex: 1;
-  margin-horizontal: 20;
-`;
-
-const TopRow = styled.View`
-  margin-bottom: 28;
-`;
-
-const Title = styled.Text`
-  color: ${COLORS.primary};
-  font-weight: 600;
-  font-size: ${SIZES.font.h3};
-  margin-bottom: 12;
-`;
-
-const SubTitle = styled.Text`
-  color: ${COLORS.GRAY};
-  font-size: ${SIZES.font.medium};
-  margin-bottom: 12;
-`;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginHorizontal: 20
+  },
+  topRow: {
+    marginBottom: 28
+  },
+  title: {
+    color: COLORS.primary,
+    fontWeight: "600",
+    fontSize: 30,
+    marginBottom: 12
+  },
+  subtitle: {
+    color: COLORS.GRAY,
+    fontSize: 14,
+    marginBottom: 12
+  }
+});
 
 const Form = ({ children, title, subtitle }) => {
   return (
-    <Container>
+    <View style={styles.container}>
       {(title || subtitle) && (
-        <TopRow>
-          {title && <Title>{title}</Title>}
-          {subtitle && <SubTitle>{subtitle}</SubTitle>}
-        </TopRow>
+        <View style={styles.topRow}>
+          {title && <Text style={styles.title}>{title}</Text>}
+          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+        </View>
       )}
       {children}
-    </Container>
+    </View>
   );
 };
 

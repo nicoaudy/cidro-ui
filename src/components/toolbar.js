@@ -4,9 +4,25 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 
 import { COLORS } from "../themes";
 
-const Toolbar = ({ left, leftHandler, center, right, rightHandler, style }) => {
+const Toolbar = ({
+  color,
+  height,
+  left,
+  leftHandler,
+  center,
+  right,
+  rightHandler,
+  style
+}) => {
   return (
-    <View style={[styles.container, style]}>
+    <View
+      style={[
+        styles.container,
+        style,
+        color && { backgroundColor: color },
+        height && { height: height }
+      ]}
+    >
       {left && (
         <TouchableOpacity style={styles.leftBox} onPress={leftHandler}>
           {left}
@@ -35,6 +51,11 @@ Toolbar.propTypes = {
   style: PropTypes.any
 };
 
+Toolbar.defaultProps = {
+  color: COLORS.warning,
+  height: 52
+};
+
 const ALIGN_STYLE = {
   left: "flex-start",
   right: "flex-end",
@@ -43,12 +64,10 @@ const ALIGN_STYLE = {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.danger,
     paddingHorizontal: 10,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: ALIGN_STYLE.center,
-    height: 52
+    alignItems: ALIGN_STYLE.center
   },
   rowBox: { flexDirection: "row", alignItems: "center" },
   leftBox: {

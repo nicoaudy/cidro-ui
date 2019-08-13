@@ -10,12 +10,12 @@ const styles = StyleSheet.create({
   },
   label: {
     color: COLORS.GRAY,
-    fontSize: SIZES.base,
+    fontSize: SIZES.INPUT_LABEL_TEXT,
     marginBottom: 10
   },
   message: {
     color: COLORS.GRAY,
-    fontSize: 12,
+    fontSize: SIZES.INPUT_HELP_TEXT,
     marginTop: 5
   }
 });

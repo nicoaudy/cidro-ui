@@ -24,7 +24,6 @@ export const COLORS = {
   GRAY: "#9ca5ab",
   MUTED: "#9FA5AA",
   BORDER: "#c6c6c6",
-  WHITE: "#fff",
   TRANSPARENT: "rgba(0,0,0,0)",
   ERROR: "#d63031",
   NEUTRAL: "rgba(255,255,255, 0.65)",
