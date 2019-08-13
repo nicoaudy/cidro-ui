@@ -27,8 +27,5 @@
     "type": "git",
     "url": "https://github.com/nicoaudy/cidro-ui"
   },
-  "license": "MIT",
-  "peerDependencies": {
-    "styled-components": "*"
-  }
+  "license": "MIT"
 }

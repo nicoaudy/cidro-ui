@@ -2,13 +2,6 @@
 
 [![npm](https://img.shields.io/npm/dt/cidro?color=blue&style=for-the-badge)](https://www.npmjs.com/package/cidro) 
 
-## Requirements
-Cidro based on `styled-components` so you have to installed first.
-
-```
-$ npm install styled-components
-```
-
 **Install**
 ```
 $ npm install cidro 
