@@ -74,9 +74,9 @@ const App = () => (
 | ------------ | :-------: | :------: | ----------------------------------------------------------------------------- |
 | left         | component |   null   | set your own component (eg: Text or Icon)                                     |
 | leftHandler  | function  | () => {} | Take an arrow function and everytime the user presses the function is called. |
-| center       |  [color]  |   null   | set your own component                                                        |
-| right        |   color   |   null   | change the shadow color                                                       |
-| rightHandler |   style   |  () =>   | Take an arrow function and everytime the user presses the function is called. |
+| center       | component |   null   | set your own component                                                        |
+| right        | component |   null   | change the shadow color                                                       |
+| rightHandler | function  | () => {} | Take an arrow function and everytime the user presses the function is called. |
 | style        |   style   |   null   | add any style to the whole container                                          |
 
 ---
