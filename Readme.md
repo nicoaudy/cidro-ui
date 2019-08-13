@@ -65,10 +65,12 @@ const App = () => (
 
 | Property     |   Type    | Default  | Description                                                                   |
 | ------------ | :-------: | :------: | ----------------------------------------------------------------------------- |
+| color        |  string   |   null   | change color                                                                  |
+| height       |  number   |    52    | change height                                                                 |
 | left         | component |   null   | set your own component (eg: Text or Icon)                                     |
 | leftHandler  | function  | () => {} | Take an arrow function and everytime the user presses the function is called. |
 | center       | component |   null   | set your own component                                                        |
-| right        | component |   null   | change the shadow color                                                       |
+| right        | component |   null   | set your own component                                                        |
 | rightHandler | function  | () => {} | Take an arrow function and everytime the user presses the function is called. |
 | style        |   style   |   null   | add any style to the whole container                                          |
 
@@ -80,14 +82,17 @@ const App = () => (
 ```javascript
 import { Button } from "cidro";
 
-const App = () => <Button title="Login" onPress={action("Button pressed")} />;
+const App = () => <Button text="Login" onPress={action("Button pressed")} />;
 ```
 
 **Available Props**
 
 | Property |  Type  | Default | Description                                              |
 | -------- | :----: | :-----: | -------------------------------------------------------- |
-| title    | string |  null   | Title is required                                        |
+| text     | string |  null   | Title is required                                        |
+| disabled |  bool  |  false  | Change the disabled button                               |
+| loading  |  bool  |  false  | Show loading indicator                                   |
+| size     | number |   16    | Change the size button                                   |
 | width    | string |  null   | Change the width                                         |
 | outline  |  bool  |  false  | Change button style                                      |
 | type     | string | primary | Available type "primary", "success", "danger", "warning" |

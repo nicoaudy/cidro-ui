@@ -43,6 +43,8 @@ const Toolbar = ({
 };
 
 Toolbar.propTypes = {
+  color: PropTypes.string,
+  height: PropTypes.number,
   left: PropTypes.node,
   leftHandler: PropTypes.func,
   center: PropTypes.node,
