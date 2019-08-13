@@ -1,6 +1,6 @@
 {
   "name": "cidro",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Cidro UI library for React Native, with spicy tasty 🌶️🔥",
   "main": "src/index.js",
   "scripts": {
