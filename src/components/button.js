@@ -1,45 +1,99 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components/native";
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  ActivityIndicator
+} from "react-native";
+import { COLORS } from "../themes";
 
-import { COLORS, SIZES } from "../themes";
+const styles = StyleSheet.create({
+  containerDefault: {
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingVertical: 15,
+    borderWidth: 2,
+    borderRadius: 3
+  },
+  containerDisabled: {
+    opacity: 0.65
+  },
 
-const Wrapper = styled.TouchableOpacity`
-  width: ${props => (props.width ? props.width : SIZES.width.full)};
-  padding: ${SIZES.size.regular};
-  justify-content: center;
-  align-items: center;
-  border-width: 1;
-  border-radius: 6;
-  border-color: ${props => (props.outline ? COLORS[props.type] : COLORS.WHITE)};
-  background-color: ${props =>
-    props.outline ? COLORS.WHITE : COLORS[props.type]};
-`;
+  textDefault: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: "#fff"
+  },
+  textDisabled: {}
+});
 
-const Title = styled.Text`
-  color: ${props => (props.outline ? COLORS[props.type] : COLORS.WHITE)};
-  font-weight: 800;
-  font-size: ${props => SIZES.BASE};
-`;
+const getStyles = ({ size, type, outline, disabled }) => {
+  const containerStyles = [styles.containerDefault];
+  const textStyles = [styles.textDefault];
 
-const Button = ({ title, width, outline, type, ...props }) => (
-  <Wrapper width={width} outline={outline} type={type} {...props}>
-    <Title outline={outline} type={type}>
-      {title}
-    </Title>
-  </Wrapper>
-);
+  if (size) {
+    containerStyles.push({
+      paddingVertical: size
+    });
+  }
+
+  if (type) {
+    containerStyles.push({
+      backgroundColor: COLORS[type],
+      borderColor: COLORS[type]
+    });
+  }
+
+  if (outline) {
+    containerStyles.push({
+      backgroundColor: "transparent"
+    });
+    textStyles.push({
+      color: COLORS[type]
+    });
+  }
+
+  if (disabled) {
+    containerStyles.push(styles.containerDisabled);
+    textStyles.push(styles.textDisabled);
+  }
+
+  return { textStyles, containerStyles };
+};
+
+const Button = ({ onPress, text, disabled, loading, style, ...rest }) => {
+  const { textStyles, containerStyles } = getStyles({ disabled, ...rest });
+
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={[containerStyles, style]}
+      disabled={disabled}
+    >
+      {loading ? <ActivityIndicator /> : <Text style={textStyles}>{text}</Text>}
+    </TouchableOpacity>
+  );
+};
 
 Button.propTypes = {
-  title: PropTypes.string.isRequired,
-  width: PropTypes.string,
+  onPress: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
+  size: PropTypes.number,
+  type: PropTypes.oneOf(["primary", "success", "warning", "danger"]),
   outline: PropTypes.bool,
-  type: PropTypes.oneOf(["primary", "success", "danger", "warning"])
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  style: PropTypes.any
 };
 
 Button.defaultProps = {
+  size: 16,
+  type: "primary",
   outline: false,
-  type: "primary"
+  disabled: false,
+  loading: false
 };
 
 export default Button;
