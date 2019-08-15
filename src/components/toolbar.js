@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 
-import { COLORS } from "../themes";
-
 const Toolbar = ({
   color,
+  noShadow,
   height,
   left,
   leftHandler,
@@ -20,7 +19,8 @@ const Toolbar = ({
         styles.container,
         style,
         color && { backgroundColor: color },
-        height && { height: height }
+        height && { height: height },
+        !noShadow && { borderBottomWidth: 1, borderBottomColor: "#c5c5c5" }
       ]}
     >
       {left && (
@@ -44,6 +44,7 @@ const Toolbar = ({
 
 Toolbar.propTypes = {
   color: PropTypes.string,
+  noShadow: PropTypes.boolean,
   height: PropTypes.number,
   left: PropTypes.node,
   leftHandler: PropTypes.func,
@@ -54,8 +55,8 @@ Toolbar.propTypes = {
 };
 
 Toolbar.defaultProps = {
-  color: COLORS.warning,
-  height: 52
+  color: "#F8F8F8",
+  height: 56
 };
 
 const ALIGN_STYLE = {
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: ALIGN_STYLE.center
   },
+  shadow: {},
   rowBox: { flexDirection: "row", alignItems: "center" },
   leftBox: {
     flex: 1,

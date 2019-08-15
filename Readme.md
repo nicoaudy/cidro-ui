@@ -1,10 +1,11 @@
 # CIDRO UI - React Native UI Library 🔥
 
-[![npm](https://img.shields.io/npm/dt/cidro?color=blue&style=for-the-badge)](https://www.npmjs.com/package/cidro) 
+[![npm](https://img.shields.io/npm/dt/cidro?color=blue&style=for-the-badge)](https://www.npmjs.com/package/cidro)
 
 **Install**
+
 ```
-$ npm install cidro 
+$ npm install cidro
 ```
 
 # Available Components
@@ -44,6 +45,7 @@ const App = () => (
 | width    |    number    |   null   | changes the width of the Block                   |
 
 ---
+
 ## Toolbar
 
 **Usage**
@@ -66,6 +68,7 @@ const App = () => (
 | Property     |   Type    | Default  | Description                                                                   |
 | ------------ | :-------: | :------: | ----------------------------------------------------------------------------- |
 | color        |  string   |   null   | change color                                                                  |
+| noShadow     |  boolean  |  false   | Toolbar without shadow                                                        |
 | height       |  number   |    52    | change height                                                                 |
 | left         | component |   null   | set your own component (eg: Text or Icon)                                     |
 | leftHandler  | function  | () => {} | Take an arrow function and everytime the user presses the function is called. |
@@ -75,6 +78,7 @@ const App = () => (
 | style        |   style   |   null   | add any style to the whole container                                          |
 
 ---
+
 ## Button
 
 **Usage**
@@ -98,7 +102,8 @@ const App = () => <Button text="Login" onPress={action("Button pressed")} />;
 | type     | string | primary | Available type "primary", "success", "danger", "warning" |
 
 ---
-## Text 
+
+## Text
 
 **Usage**
 
@@ -125,6 +130,7 @@ const App = () => <Text h1>CIDRO UI 🔥</Text>;
 | italic   |  bool  |  false  | Sets the fontStyle to 'italic'.   |
 
 ---
+
 ## Form
 
 **Usage**
@@ -148,6 +154,7 @@ const App = () => (
 | subtitle | bool, string | false, null | set your subtitle      |
 
 ---
+
 ## Input
 
 **Usage**
