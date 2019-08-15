@@ -5,6 +5,15 @@ import TextInput from "./components/form/input";
 import Block from "./components/block";
 import Text from "./components/text";
 import Toolbar from "./components/toolbar";
-import Avatar from "./components/avatar";
+import AvatarText from "./components/avatar_text";
 
-export { Button, Form, FieldWrapper, TextInput, Block, Text, Toolbar, Avatar };
+export {
+  Button,
+  Form,
+  FieldWrapper,
+  TextInput,
+  Block,
+  Text,
+  Toolbar,
+  AvatarText
+};

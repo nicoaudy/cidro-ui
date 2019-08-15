@@ -5,31 +5,30 @@ import { View, Text } from "react-native";
 import { capitalizeFirstLetter } from "../helpers";
 import { COLORS } from "../themes";
 
-const Avatar = ({
-  children,
+const AvatarText = ({
   size,
   backgroundColor,
   textColor,
-  type,
+  circle,
   title,
   style
 }) => {
-  let initName = initials(capitalizeFirstLetter(title));
-  let containerStyle = {
+  const initName = initials(capitalizeFirstLetter(title));
+  const containerStyle = {
     width: size,
     height: size,
     backgroundColor: backgroundColor,
     alignItems: "center",
     justifyContent: "center"
   };
-  let textStyle = {
+  const textStyle = {
     color: textColor,
     fontSize: size / 3.14,
     fontWeight: "bold",
     letterSpacing: 1
   };
 
-  if (type == "circle") {
+  if (circle) {
     containerStyle.borderRadius = size / 2;
     return (
       <View style={[style, containerStyle]}>
@@ -49,20 +48,20 @@ const Avatar = ({
   }
 };
 
-Avatar.propTypes = {
-  children: PropTypes.node,
+AvatarText.propTypes = {
   title: PropTypes.string,
   size: PropTypes.number,
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
-  type: PropTypes.string,
+  circle: PropTypes.boolean,
   style: PropTypes.any
 };
 
-Avatar.defaultProps = {
+AvatarText.defaultProps = {
   size: 60,
+  circle: false,
   backgroundColor: COLORS.BLACK,
   textColor: COLORS.WHITE
 };
 
-export default Avatar;
+export default AvatarText;
