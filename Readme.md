@@ -180,6 +180,52 @@ const App = () => (
 | message  | string |  null   | set your message (eg: "Whops your email is invalid") |
 | type     | string |  null   | Available type "success", "error"                    |
 
+---
+
+## Avatar
+
+**Usage**
+
+```javascript
+import { Avatar } from "cidro";
+
+const App = () => (
+  <Avatar source={{ uri: "https://facebook.github.io/react/logo-og.png" }} />
+);
+```
+
+**Available Props**
+
+| Property |  Type   | Default | Description                                               |
+| -------- | :-----: | :-----: | --------------------------------------------------------- |
+| size     | number  |   60    | set size                                                  |
+| source   |   any   |  null   | set image source, can be static from your app or external |
+| circle   | boolean |  false  | set border radius / 2 if set true                         |
+| style    |  style  |  null   | add any style to the whole container                      |
+
+---
+
+## Avatar Text
+
+**Usage**
+
+```javascript
+import { AvatarText } from "cidro";
+
+const App = () => <AvatarText title="Cidro UI" />;
+```
+
+**Available Props**
+
+| Property        |  Type   | Default | Description                          |
+| --------------- | :-----: | :-----: | ------------------------------------ |
+| title           | string  |  null   | set title for initials               |
+| size            | number  |   60    | set size                             |
+| backgroundColor | string  |  black  | set background color                 |
+| textColor       | string  |  white  | set text title color                 |
+| circle          | boolean |  false  | set border radius / 2 if set true    |
+| style           |  style  |  null   | add any style to the whole container |
+
 ## Support
 
 <a href="https://www.buymeacoffee.com/sAb9PGzxT" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
