@@ -26,7 +26,7 @@ const Avatar = ({ size, source, circle, style }) => {
 Avatar.propTypes = {
   size: PropTypes.number,
   source: PropTypes.any,
-  circle: PropTypes.boolean,
+  circle: PropTypes.bool,
   style: PropTypes.any
 };
 

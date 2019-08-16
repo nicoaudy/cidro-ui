@@ -44,7 +44,7 @@ const Toolbar = ({
 
 Toolbar.propTypes = {
   color: PropTypes.string,
-  noShadow: PropTypes.boolean,
+  noShadow: PropTypes.bool,
   height: PropTypes.number,
   left: PropTypes.node,
   leftHandler: PropTypes.func,
@@ -56,7 +56,8 @@ Toolbar.propTypes = {
 
 Toolbar.defaultProps = {
   color: "#F8F8F8",
-  height: 56
+  height: 56,
+  noShadow: false
 };
 
 const ALIGN_STYLE = {

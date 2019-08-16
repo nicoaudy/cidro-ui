@@ -53,7 +53,7 @@ AvatarText.propTypes = {
   size: PropTypes.number,
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
-  circle: PropTypes.boolean,
+  circle: PropTypes.bool,
   style: PropTypes.any
 };
 

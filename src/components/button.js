@@ -89,7 +89,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  size: 16,
+  size: 10,
   type: "primary",
   outline: false,
   disabled: false,
