@@ -179,3 +179,7 @@ const App = () => (
 | label    | string |  null   | set your label                                       |
 | message  | string |  null   | set your message (eg: "Whops your email is invalid") |
 | type     | string |  null   | Available type "success", "error"                    |
+
+## Support
+
+<a href="https://www.buymeacoffee.com/sAb9PGzxT" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>

@@ -5,6 +5,7 @@ import TextInput from "./components/form/input";
 import Block from "./components/block";
 import Text from "./components/text";
 import Toolbar from "./components/toolbar";
+import Avatar from "./components/avatar";
 import AvatarText from "./components/avatar_text";
 
 export {
@@ -15,5 +16,6 @@ export {
   Block,
   Text,
   Toolbar,
+  Avatar,
   AvatarText
 };
